@@ -1,14 +1,6 @@
-'''- Use websockets to get block and transaction data real-time for the last 3 blocks
-- include pending transactions, merge the two transaction sets and sort them by timestamp
-- re-render the new blocks and their transaction data on the screen each time the web socket fires and provides data
-Should take about a week if you’re learning react from 0
-Start off with learning the difference between React Class Components and React Functional Components,
-then decide which is better for managing the state of the application
-Also use lifecycle hooks like useEffect and componentDidMount'''
+'''Use you own infura PROJECT ID where it says PROJECT_ID in the url'''
 
 from pprint import pprint
-import asyncio
-import websockets
 import pandas as pd
 from web3 import Web3
 import json
@@ -16,7 +8,7 @@ import time
 from web3.auto import w3
 
 
-infura_url = 'https://mainnet.infura.io/v3/936add04bd224fbcb067c809d7bb14f3'
+infura_url = 'https://mainnet.infura.io/v3/PROJECT_ID'
 web3 = Web3(Web3.HTTPProvider(infura_url))
 is_connected = web3.isConnected()
 def ethereum():
