@@ -1,0 +1,75 @@
+<!--'''https://www.programmersought.com/article/62861232605/ FOR AUTO RELOAD FEATURE IN HTML AND JS'''-->
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+		<title>Ethereum Block Data</title>
+		<style>
+			body {
+				background-color: #171717;
+				}
+			h1 {
+	 			color: #EDEDED;
+				 font-family:  'Orbitron', sans-serif;;
+				 font-size: 2em;
+				 margin-bottom: 0;
+			}
+			 table {
+				 font-family: Orbitron, sans-serif;
+			}
+			 table th, table td {
+				 padding: 0.25em 0.5em;
+				 text-align: left;
+			}
+			 table th:nth-child(2), table td:nth-child(2) {
+				 text-align: right;
+			}
+			 table td {
+				 background-color: #EDEDED;
+			}
+			 table th {
+				 background-color: #DA0037;
+				 color: #fff;
+			}
+			 .dataframe {
+				 border-collapse: separate;
+				 border-spacing: 0.25em 1em;
+			}
+			 .dataframe tbody tr:nth-child(odd) {
+				 transform: rotate(0.5deg);
+			}
+			 .dataframe thead tr, .dataframe tbody tr:nth-child(even) {
+				 transform: rotate(-0.5deg);
+			}
+		</style>
+		<meta charset="utf-8" />
+		<meta http-equiv="refresh" content="20">
+		<link rel="stylesheet" type="css" href="static/assets/css/main.css"/>
+	</head>
+	<body>
+	<link rel="stylesheet" type="css" href="static/assets/css/main.css"/>
+		<h1 align="center">Last 3 Blocks:</h1><br>
+					{% for table in blocks %}
+            					{{ table|safe }}
+					{% endfor %}
+		<h1 align="center">Pending Transactions: </h1><br>
+					{% for table in pending %}
+            					{{ table|safe }}
+						{% endfor %}
+
+				<!-- Footer -->
+					<div id="footer">
+						<ul class="copyright">
+							<li>&copy; {{year}} Zubin Madon.</li>
+						</ul>
+					</div>
+
+			</div>
+
+
+
+	</body>
+<link rel="stylesheet" type="css" href="static/assets/css/main.css"/>
+</html>
